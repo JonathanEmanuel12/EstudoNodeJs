@@ -1,10 +1,11 @@
 var mysql = require('mysql2');
 
 var connection = mysql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	password : 'passroot',
-	database : 'irafon'
+	host : 'containers-us-west-120.railway.app',
+	user : 'postgres',
+	password : 'HaqyWZc64UluvjkArckk',
+	database : 'railway',
+	port : 6319
 });
 
 var mysqlFunctions = {

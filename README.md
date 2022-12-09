@@ -28,6 +28,7 @@ Contato: jonathaanemanuel21@gmail.com
 Foi adicionado um arquivo docker-compose.yml para rodar o banco de dados.
 Para rodar a aplicação deve-se seguir os seguintes passos após clonar o repositório:
   - npm ci
+  - pegar as configs do banco do arquivo docker compose e colocar utils/mysql_functions.js
   - rodar docker compose up -d no terminal
   - criar tabela no banco de dados com o script bd/scriptIrafon.sql
   - rodar node app.js no terminal
