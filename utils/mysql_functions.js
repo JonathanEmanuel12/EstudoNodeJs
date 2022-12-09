@@ -1,12 +1,17 @@
 var mysql = require('mysql2');
 
-var connection = mysql.createConnection({
-	host : process.env.PGHOST,
-	user : process.env.PGUSER,
-	password : process.env.PGPASSWORD,
-	database : process.env.PGDATABASE,
-	port : process.env.PGPORT
-});
+try {
+	var connection = mysql.createConnection({
+		host : process.env.PGHOST,
+		user : process.env.PGUSER,
+		password : process.env.PGPASSWORD,
+		database : process.env.PGDATABASE,
+		port : process.env.PGPORT
+	});
+}
+catch(error) {
+	console.log(error)
+}
 
 var mysqlFunctions = {
 	inserirContato : function (contato) {
